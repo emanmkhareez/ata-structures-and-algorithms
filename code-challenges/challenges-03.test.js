@@ -6,9 +6,20 @@ CHALLENGE 1 - Review
 Write a function called addTwo that takes in an array and adds two to every value using a for loop. Place the new value in a new array. Return the new array.
 ------------------------------------------------------------------------------------------------ */
 
-const addTwo = (arr) => {
-  // Solution code here...
-};
+
+  const addTwo = (arr) => {
+    let newArr = [];
+    for(let i=0; i < arr.length; i++){
+   
+   
+    newArr.push(arr[i]+2)
+   }
+     
+     return newArr;
+    // Solution code here...
+  };
+  
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -18,7 +29,6 @@ Write a function named typeNum that, given an array as input, uses filter to ret
 For example, typeNum([1, 'bob' ,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
-const typeNum = (arr) => {
   const typeNum = (arr) => {
     // Solution code here...
     let newArr=arr.filter(val=>{
@@ -28,7 +38,7 @@ const typeNum = (arr) => {
     return newArr;
   };
   
-};
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
