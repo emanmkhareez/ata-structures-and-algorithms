@@ -128,12 +128,12 @@ This function should use forEach to populate your grocery list based on the stor
   
 
 const createList = (availableItems) => {
-  let array=[]
-  inventory.forEach((item)=>{
+  let array=[];
+  availableItems.forEach((item)=>{
     if(item.available==true)
     array.push(item.name)
-  })
-  return array
+  });
+  return array;
 
 };
 
@@ -153,17 +153,17 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz=(arr)=>{
-  let array=[]
+  let array=[];
   arr.forEach((item)=>{
     if(item % 3==0 && item % 5==0)
   
-      array.push( 'Fizz Buzz ')
+      array.push('Fizz Buzz')
      
      else if(item % 5==0)
      array.push('Buzz')
   
      else if(item % 3==0 )
-     array.push('Fizz ')
+     array.push('Fizz')
     else{
       array.push(item)
     }
