@@ -8,7 +8,6 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 
 ------------------------------------------------------------------------------------------------ */
 
-const raisedToTheThird = (arr) => {
   const raisedToTheThird = (arr) => {
 
   
@@ -33,8 +32,8 @@ Write a function named addOne that, given an array of numbers, uses map to retur
 
 const addOne = (arr) => {
   
-  let  newarray = numbers.map((item)=>{
-retuen (item+1)
+  let  newarray = arr.map((item)=>{
+    return (item+1 )
   
    } ); 
    return newarray;
@@ -72,7 +71,7 @@ const forLoopTwoToThe = (arr) => {
  for(let i=0; i < arr.length; i++){
 
 
- newArr.push(Math.pow(2,arr[i]))
+  array2.push(Math.pow(2,arr[i]))
 }
   
   return array2;
