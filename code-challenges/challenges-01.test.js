@@ -64,12 +64,12 @@ Then, write a function named `speaker` that takes in an array of strings and a c
 Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array. 
 ------------------------------------------------------------------------------------------------ */
 const greeting = (word) => {
-  // Solution code here...
+ 
   return word.toUpperCase()+ '!';
 };
 
 const speaker = (words, callback) => {
-  // Solution code here...
+
   let Arr = [];
   words.forEach(val =>{
     let str = callback(val);
@@ -94,11 +94,15 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  // Solution code here...
+arr.push(value)
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
+for(let i=0;i<times;i++)
+{
+  callback(arr,num)
+}
+return arr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -119,9 +123,20 @@ The inventory is formatted like this:
 This function should use forEach to populate your grocery list based on the store's inventory. If the item is available, add it to your list. Return the final list.
 ------------------------------------------------------------------------------------------------ */
 
+
+
+  
+
 const createList = (availableItems) => {
-  // Solution code here...
+  let array=[]
+  inventory.forEach((item)=>{
+    if(item.available==true)
+    array.push(item.name)
+  })
+  return array
+
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 STRETCH - CHALLENGE 7
@@ -137,10 +152,26 @@ Iterate over the array using forEach to determine the output based on several ru
 Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
-const fizzbuzz = (arr) => {
-  // Solution code here...
-};
-
+const fizzbuzz=(arr)=>{
+  let array=[]
+  arr.forEach((item)=>{
+    if(item % 3==0 && item % 5==0)
+  
+      array.push( 'Fizz Buzz ')
+     
+     else if(item % 5==0)
+     array.push('Buzz')
+  
+     else if(item % 3==0 )
+     array.push('Fizz ')
+    else{
+      array.push(item)
+    }
+  
+  })
+   return array
+  }
+  
 /* ------------------------------------------------------------------------------------------------
 TESTS
 
@@ -192,7 +223,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
   test('It should print out messages or numbers', () => {
