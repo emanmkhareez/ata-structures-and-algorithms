@@ -37,7 +37,15 @@ function lower(str) {
 }
 
 const updateAnimal = (arr, callback) => {
-  // Solution code here...
+  let newArr=[]
+  arr.filter((item)=>{
+    let arrItem=callback(item)
+    console.log(item)
+    newArr.push(arrItem)
+
+  })
+return newArr
+ 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -93,14 +101,14 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 
 HINT: Do it with a custom sort callback, not with using `.reverse()`. ;)
 ------------------------------------------------------------------------------------------------ */
-const sortNumbers = (arr) => {
+const sortBackwards  = (arr) => {
   // Solution code here...
   arr.sort((a,b)=>{
     if(a < b){
-      return -1;
+      return 1;
     }
     else if(a > b){
-      return 1;
+      return -1;
     }
     else return 0;
   });
