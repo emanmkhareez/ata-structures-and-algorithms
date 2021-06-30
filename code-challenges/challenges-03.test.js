@@ -90,14 +90,14 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 
 const notInFirstArray = (forbiddenValues, arr) => {
   // Solution code here...
-  let notIncluded=[];
+  let array=[];
   arr.filter(item=>{
     if(!forbiddenValues.includes(item)){
-      notIncluded.push(item);
+      array.push(item);
     }
 
   });
-  return notIncluded;
+  return array;
 };
 
 
