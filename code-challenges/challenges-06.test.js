@@ -61,7 +61,7 @@ appendFirstToLast(a);
 console.log(a) prints [1, 2, 3, 1]
 ------------------------------------------------------------------------------------------------ */
 const appendFirstToLast = (arr) => {
-  let newArr = arr.push(arr[0]);
+  arr.push(arr[0]);
   return arr
   // Solution code here...
 };
@@ -81,11 +81,10 @@ const octavia = { fullName: 'Octavia Estelle Butler' };
 addBirthYearProperty(octavia, 1947);
 console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 ------------------------------------------------------------------------------------------------ */
-const a = { fullName: 'Octavia Butler' };
+
 const addBirthYearProperty = (obj, year) => {
  obj.yearBorn = year 
-  // Solution code here...
-  // return a
+  
 };
 
 
@@ -103,8 +102,12 @@ console.log(people[1].isAuthor) prints true
 ------------------------------------------------------------------------------------------------ */
 
 const setStatusAsAuthor = (people) => {
-  // Solution code here...
-};
+  for(let i=0;i<people.length;i++){
+ people[i].isAuthor=true
+
+  }
+ 
+ };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
@@ -172,7 +175,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should add a property to every object in an array', () => {
     const a = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }, { fullName: 'Kurt Vonnegut' }];
     setStatusAsAuthor(a);
