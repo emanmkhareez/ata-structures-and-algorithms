@@ -25,8 +25,18 @@ let starWarsPeople = [
 ];
 
 const sortStarWarsCharacters = (starWarsArr) => {
-  // Solution code here...
-}
+  
+  starWarsArr.sort((one,two)=>{
+    if(parseInt(one.height) > parseInt(two.height)){
+      return -1;
+    }
+    else if(parseInt(one.height) < parseInt(two.height)){
+      return 1;
+    }
+    else return 0;
+  });
+  return starWarsArr;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -35,7 +45,9 @@ Write a function named removeThree that takes an index and an array. The functio
 ------------------------------------------------------------------------------------------------ */
 
 const removeThree = (idx, arr) => {
-  // Solution code here...
+  
+  arr.splice(idx,3);
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,9 +56,9 @@ CHALLENGE 3
 Write a function named joinArray that takes an array and joins all of the elements together in one string on a space.
 ------------------------------------------------------------------------------------------------ */
 const joinArray = (arr) => {
-  let arr = arr.join(' ');
+  let array = arr.join(' ');
   // Solution code here...
-  return arr
+  return array
 };
 
 
@@ -64,9 +76,12 @@ For example, if the input is 'Welcome', the output will be:
 ------------------------------------------------------------------------------------------------ */
 
 const howMuchPencil = (str) => {
-  let result = [];
-  // Solution code here...
-  return result;
+  let array = [];
+
+  for (let i = 0; i <= str.length; i++) {
+    array.push(str.split('').slice(i).join(''));
+  }
+  return array;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -78,7 +93,8 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
 const wordsToCharList = (arr) => {
-  // Solution code here...
+
+  return arr.split('');
 };
 
 
