@@ -9,7 +9,14 @@ using the 'reduce' method.
 E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
-  // Solution code here...
+  
+  let maxnum= arr.reduce((acc,val)=>{
+    if(acc<val){
+      acc =val;
+    }
+    return acc;
+  });
+  return maxnum;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -49,13 +56,19 @@ describe('Testing challenge 3', () => {
 ------------------------------------------------------------------------------------------------ */
 
 const checkValues = (obj, value) => {
-  let values=Object.values(obj)
- if (values==value)
- return true
-
- 
-
+  // Solution code here...
+  let arrOfValues=Object.values(obj);
+  let test;
+  arrOfValues.forEach(value1=>{
+    if(value1==value){
+      return test=true;
+    }else{
+      return test=false;
+    }
+  });
+  return test;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -78,17 +91,15 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 
 const updateNumbers = (obj) => {
-  let array=[]
-     let result=Object.keys(obj)
-     result.forEach(val=>{
-      let c=val+obj[val]
-      array.push(c)
-    
-      
-     })
-   return array
-  };
-
+  // Solution code here...
+  let arr=Object.entries(obj);
+  let arr1=arr.map(item=>{
+    return (item.join(': '));
+  });
+  return arr1;
+};
+ 
+  
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
@@ -169,9 +180,17 @@ describe('Testing challenge 6', () => {
   });
 
 ------------------------------------------------------------------------------------------------ */
-
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
+
+  let child=false;
+  let array=Object.values(arr);
+
+  array.filter(item => {
+    if(item.name === character && item.children){
+      child= true;
+    }
+  });
+  return child;
 
 };
 
