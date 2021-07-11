@@ -8,9 +8,10 @@ Write a function named returnTen, takes in a string and uses split and splice to
 ------------------------------------------------------------------------------------------------ */
 
 function returnTen(str){
-  // Solution code here...
-}
 
+  let output=str.split('').splice(-10);
+  return output;
+}
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -34,7 +35,7 @@ for (let i=0;i<matrix.length;i++){
     }
   }
 }
-return num
+return maxnum
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -116,10 +117,47 @@ Pat has decided that he would also like to organize his data as objects containi
 Here is sample data for the 9:00 sales: { sales: '88 cookies', time: '9 a.m.' }.
 
 Write a function named salesData that uses forEach to iterate over the hourlySales array and create an object for each hour. Return an array of the formatted data.
+
+describe('Testing challenge 4', () => {
+  test('It should add the hourly totals array', () => {
+    expect(grandTotal(cookieStores)).toStrictEqual([88, 153, 252, 286, 139, 161, 145, 232, 276, 207, 161, 169]);
+  });
+});
+
+describe('Testing challenge 5', () => {
+  test('It should create an object of data for each store', () => {
+    expect(salesData(hoursOpen, grandTotal(cookieStores))).toStrictEqual([
+      { sales: '88 cookies', time: '9 a.m.' },
+      { sales: '153 cookies', time: '10 a.m.' },
+      { sales: '252 cookies', time: '11 a.m.' },
+      { sales: '286 cookies', time: '12 p.m.' },
+      { sales: '139 cookies', time: '1 p.m.' },
+      { sales: '161 cookies', time: '2 p.m.' },
+      { sales: '145 cookies', time: '3 p.m.' },
+      { sales: '232 cookies', time: '4 p.m.' },
+      { sales: '276 cookies', time: '5 p.m.' },
+      { sales: '207 cookies', time: '6 p.m.' },
+      { sales: '161 cookies', time: '7 p.m.' },
+      { sales: '169 cookies', time: '8 p.m.' }
+    ]);
+
+    expect(salesData(hoursOpen, grandTotal(cookieStores)).length).toStrictEqual(hoursOpen.length);
+  });
+});
+
 ------------------------------------------------------------------------------------------------ */
 
+
 const salesData = (hours, data) => {
-  // Solution code here...
+
+  let array=[];
+  for(let i=0; i<hours.length;i++){
+    let object={sales:`${data[i]} cookies` , time:`${hours[i]}`};
+    array.push(object);
+  }
+  return array;
+
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -144,7 +182,9 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+ 
+  let quantitys=arr[2].items[1].quantity;
+  return quantitys;
 };
 
 /* ------------------------------------------------------------------------------------------------
