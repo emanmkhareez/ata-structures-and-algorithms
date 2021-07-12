@@ -6,10 +6,12 @@ CHALLENGE 1 - Review
 Write a function named returnTen, takes in a string and uses split and splice to return the last 10 characters from that string as elements of an array.
 
 ------------------------------------------------------------------------------------------------ */
-
 function returnTen(str){
-  // Solution code here...
+
+  let output=str.split('').splice(-10);
+  return output;
 }
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -29,12 +31,12 @@ const findMax = (matrix) => {
   let maxnum=0
 for (let i=0;i<matrix.length;i++){
   for(let j=0;j<matrix[i].length;j++){
-    if(matrix[i][j]>num){
+    if(matrix[i][j]>maxnum){
       maxnum=matrix[i][j]
     }
   }
 }
-return num
+return maxnum
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -119,7 +121,15 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  // Solution code here...
+
+  let array=[];
+  for(let i=0; i<hours.length;i++){
+    let object={sales:`${data[i]} cookies` , time:`${hours[i]}`};
+    array.push(object);
+  }
+  return array;
+
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -144,7 +154,9 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+ 
+  let quantitys=arr[2].items[1].quantity;
+  return quantitys;
 };
 
 /* ------------------------------------------------------------------------------------------------
