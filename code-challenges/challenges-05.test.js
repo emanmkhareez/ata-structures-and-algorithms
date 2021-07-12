@@ -31,7 +31,7 @@ describe('Testing challenge 2', () => {
     expect(addValues([1, 2, 3, 4, 5])).toStrictEqual(15);
     expect(addValues([])).toStrictEqual(0);
     expect(addValues([1, 2, 3, 4, -5])).toStrictEqual(5);
-  });
+  }); 
 });
 ------------------------------------------------------------------------------------------------ */
 
@@ -176,9 +176,9 @@ describe('Testing challenge 6', () => {
 });
 
 ------------------------------------------------------------------------------------------------ */
-
 const reversedString = (str) => {
   // Solution code here...
+  return str.split('').reduce((x, c)=> c + x , '');
 };
 
 /* ------------------------------------------------------------------------------------------------
