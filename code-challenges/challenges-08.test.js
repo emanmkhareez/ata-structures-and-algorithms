@@ -8,7 +8,16 @@ Use the characters data below for all of the challenges except challenge 2 and 3
 
 Write a function named sortByChildren that sorts the characters below by the number of children in each house (fewest to most). If a house has the same number of children, sort alphabetically by house name.
 
+
 ------------------------------------------------------------------------------------------------ */
+
+// describe('Testing challenge 1', () => {
+//   test('It should sort the characters by number of children', () => {
+//     expect(sortByChildren(characters)[0].name).toStrictEqual('Euron');
+//     expect(sortByChildren(characters)[0].children.length).toStrictEqual(0);
+//   });
+// });
+
 let characters = [
   {
     name: 'Eddard',
@@ -55,7 +64,21 @@ let characters = [
 ];
 
 const sortByChildren = (charArray) => {
-  // Solution code here...
+  let arr=[]
+arr=charArray.sort((a,b)=>{
+  if(a.children.length>b.children.length)
+  return 1
+else if(a.children.length<b.children.length)
+{
+  return-1
+}
+else{
+  return 0
+}
+
+})
+return arr
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -64,10 +87,16 @@ CHALLENGE 2
 Write a function named containsW that takes in a string. This function should use a regular expression pattern to return true if the string contains the letter 'w' in lower case or false if it does not. 
 
 ------------------------------------------------------------------------------------------------ */
+// describe('Testing challenge 2', () => {
+//   test('It should return true if the input contains a lower case w', () => {
+//     expect(containsW('hello world')).toBe(true);
+//   });
 
-const containsW = (str) => {
-  // Solution code here...
-};
+  const containsW = (str) => {
+    let regx=/w/g
+    let result=regx.test(str)
+    return result
+    };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -80,10 +109,26 @@ For example:
 'h3llo world' returns true
 'hello world' returns false
 ------------------------------------------------------------------------------------------------ */
+// describe('Testing challenge 3', () => {
+//   test('It should return true if the input is a number', () => {
+//     expect(isNum(1234567890)).toBeTruthy();
+//     expect(isNum('12345')).toBeTruthy();
+//   });
+//   test('It should return true if the input contains a number', () => {
+//     expect(isNum('h3llo w0rld')).toBeTruthy();
+//   });
+//   test('It should return false if the input does not contain a number', () => {
+//     expect(isNum('hello world')).toBeFalsy();
+//     expect(isNum('')).toBeFalsy();
+//   });
+// });
+
 
 const isNum = (input) => {
-  // Solution code here...
-};
+  let regx=/\d/g
+  let result=regx.test(input)
+  return result 
+ };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -92,9 +137,24 @@ Write a function named containsWorld that takes in a string or number of any len
 
 ------------------------------------------------------------------------------------------------ */
 
+// describe('Testing challenge 4', () => {
+//   test('It should return true if the input contains the word school in lower case', () => {
+//     expect(containsWorld('hello world')).toBe(true);
+//   });
+//   test('It should return false if the input contains the word school with any upper case letters', () => {
+//     expect(containsWorld('Hello World')).toBe(false);
+//   });
+//   test('It should return false if the input does not contain the word school', () => {
+//     expect(containsWorld('hello everyone')).toBe(false);
+//   });
+// })
+
+
 const containsWorld = (input) => {
-  // Solution code here...
-};
+ let regx=/(world)/g
+   let result=regx.test(input)
+   return result
+  };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -104,9 +164,30 @@ Write a function named isCapitalized that takes in a string. This function shoul
 Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
+// describe('Testing challenge 5', () => {
+//   test('It should only return words that begin with a capital letter', () => {
+//     const capitalResult = isCapitalized('We only want to Return the Words that begin With a capital Letter');
+
+//     expect(capitalResult).toStrictEqual([ 'We', 'Return', 'Words', 'With', 'Letter' ]);
+//     expect(capitalResult.length).toStrictEqual(5);
+
+//     expect(isCapitalized('Given by our hand in the meadow that is called Runnymede, between Windsor and Staines, on the fifteenth day of June in the seventeenth year of our reign (i.e. 1215: the new regnal year began on 28 May).')).toStrictEqual(['Given', 'Runnymede', 'Windsor', 'Staines', 'June', 'May']);
+
+//     expect(isCapitalized('these words are all failures')).toStrictEqual([]);
+//   });
+// });
+
 const isCapitalized = (str) => {
-  // Solution code here...
-};
+  let array=[]
+  
+  let regx=/\b[A-Z](\w)*/g
+  if(str.match(regx)===null){
+    return array
+  }
+  else{
+   return str.match(regx)}}
+
+ 
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -114,9 +195,29 @@ CHALLENGE 6
 Write a function named citiesAtoJ that takes in an array of city names and uses a regular expression pattern to return a new array containing any cities that begin with the letters A through J, inclusive.
 ------------------------------------------------------------------------------------------------ */
 
-const citiesAtoJ = (arr) => {
-  // Solution code here...
-};
+// describe('Testing challenge 6', () => {
+//   let cities = ['Cleveland', 'San Diego', 'Birmingham', 'Seattle', 'Miami', 'New York City', 'Omaha', 'Portland', 'Austin', 'Boston', 'Newport Beach', 'Hoboken'];
+
+//   test('It should return the cities whose names begin with the letters A through J', () => {
+//     expect(citiesAtoJ(cities)).toContain('Cleveland', 'Birmingham', 'Austin', 'Boston', 'Hoboken');
+//     expect(citiesAtoJ(cities).length).toStrictEqual(5);
+
+//     expect(citiesAtoJ([])).toStrictEqual([]);
+//     expect(citiesAtoJ(['Albuquerque', 'Chicago', 'Philadelphia', 'Newark', 'Sacramento', 'Eugene'])).toEqual(expect.arrayContaining(['Albuquerque', 'Chicago', 'Eugene']));
+//   });
+
+
+
+  const citiesAtoJ = (arr) => {
+    let regx=/^[A-J](\w)*/ig
+    let result1=arr.filter(item=>{
+  if(item.match(regx))
+  return item
+    })
+  
+   return result1
+   
+  };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
