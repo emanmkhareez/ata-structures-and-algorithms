@@ -62,7 +62,7 @@ console.log(a) prints [1, 2, 3, 1]
 ------------------------------------------------------------------------------------------------ */
 const appendFirstToLast = (arr) => {
   let newArr = arr.push(arr[0]);
-  return arr
+
   // Solution code here...
 };
 
@@ -85,7 +85,7 @@ const a = { fullName: 'Octavia Butler' };
 const addBirthYearProperty = (obj, year) => {
  obj.yearBorn = year 
   // Solution code here...
-  // return a
+  
 };
 
 
