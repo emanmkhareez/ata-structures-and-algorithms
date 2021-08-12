@@ -7,19 +7,10 @@ Write a function named returnTen, takes in a string and uses split and splice to
 
 ------------------------------------------------------------------------------------------------ */
 function returnTen(str){
-<<<<<<< HEAD
 
   let output=str.split('').splice(-10);
   return output;
 }
-
-
-=======
-
-  let output=str.split('').splice(-10);
-  return output;
-}
->>>>>>> 3033b522ce9929e28fa5b16ad6309bbcc11760aa
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 

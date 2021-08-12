@@ -121,7 +121,7 @@ describe('Testing challenge 6', () => {
 const gruffaloCrumble = {
   name: 'How to make a Gruffalo Crumble',
   ingredients: [
-    '1 medium-sized Gruffalo',
+    '1 -sizedmedium Gruffalo',
     '8 pounds oats',
     '2 pounds brown sugar',
     '4 pounds flour',
@@ -146,11 +146,15 @@ const gruffaloCrumble = {
   ]
 };
 
-
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
-  return result;
+  recipe.ingredients.map(item=>{
+    result1=item.slice(item.indexOf(' ')+1)
+    result3=result1.slice(result1.indexOf(' ')+1)
+result.push(result3)
+  })
+  return result
 };
 
 /* ------------------------------------------------------------------------------------------------

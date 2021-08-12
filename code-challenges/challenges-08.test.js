@@ -97,6 +97,7 @@ Write a function named containsW that takes in a string. This function should us
     let result=regx.test(str)
     return result
     };
+    
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -129,6 +130,7 @@ const isNum = (input) => {
   let result=regx.test(input)
   return result 
  };
+ 
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -168,7 +170,7 @@ Return an array containing all the matches.
 //   test('It should only return words that begin with a capital letter', () => {
 //     const capitalResult = isCapitalized('We only want to Return the Words that begin With a capital Letter');
 
-//     expect(capitalResult).toStrictEqual([ 'We', 'Return', 'Words', 'With', 'Letter' ]);
+//     expect(capitalResult).toStrictEqual([ 'We', 'Return', 'Words', 'With', 'c' ]);
 //     expect(capitalResult.length).toStrictEqual(5);
 
 //     expect(isCapitalized('Given by our hand in the meadow that is called Runnymede, between Windsor and Staines, on the fifteenth day of June in the seventeenth year of our reign (i.e. 1215: the new regnal year began on 28 May).')).toStrictEqual(['Given', 'Runnymede', 'Windsor', 'Staines', 'June', 'May']);
