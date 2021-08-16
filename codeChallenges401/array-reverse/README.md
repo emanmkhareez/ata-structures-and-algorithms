@@ -1,6 +1,6 @@
  array-reverse
 
-![reversedImage](./reversedimage.png)
+
 
 # Reverse an Array
 
