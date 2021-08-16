@@ -20,3 +20,4 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 | Syntax      | Description |
 | ----------- | ----------- |
 | reversed|[reverseArray](./codeChallenges401/array-reverse/README.md)|
+|ShiftArray|[ShiftArray](./codeChallenges401/array-reverse/array-insert-shift/README.md) 
