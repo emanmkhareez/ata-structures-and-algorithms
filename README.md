@@ -21,6 +21,6 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 | ----------- | ----------- |
 | reversed|[reverseArray](./codeChallenges401/array-reverse/README.md)|
 |ShiftArray|[ShiftArray](./codeChallenges401/array-reverse/array-insert-shift/README.md) |
-|arraysearch|[ShiftArray](./codeChallenges401/array-binary-search/README.md)| 
+|arrayBinarrySearch|[arrayBinarySearch](./codeChallenges401/array-binary-search/README.md)| 
 |matrix |[matrix](./codeChallenges401/maxtrix/REDME.md)|
 |LinkedList |[LinkedList](codeChallenges401/linkedlist/README.md)|
