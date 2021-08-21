@@ -51,7 +51,7 @@ class Linkedlist {
       tostring() {
      
           let current = this.head;
-          let str=" ";
+          let str="";
           while (current!==null) {
               str=str+`{${current.data}}->`;
               current=current.next;
