@@ -19,4 +19,6 @@ function BinarrySearch(array,value){
   return -1
   
   }
+  BinarrySearch(arr)
+
   module.exports=BinarrySearch()
