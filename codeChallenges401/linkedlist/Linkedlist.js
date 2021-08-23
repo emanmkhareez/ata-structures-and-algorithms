@@ -63,7 +63,43 @@ class Linkedlist {
           return str;
           
       }
-  
+
+      kth(value){
+        if(  value < 0 || value>this.size ){
+          return false
+        }
+
+
+        
+        let  pt=this.head
+       //  console.log(pt.data)
+        pt=pt.next
+             // console.log(pt.next)
+             // console.log(this.size)
+ 
+       for(let i=1;i<this.size - value +1 ;i++ )
+       {
+            pt=pt.next
+       }
+        
+      
+        
+       return  pt.data
+ 
+     }
+     
   
   }
+  const list= new Linkedlist()
+     list.insert(4)
+     console.log(list)
+     list.insert(6)
+     console.log(list)
+     list.insert(8)
+     console.log(list)
+     list.insert(10)
+     console.log(list)
+     list.khl(0)
+     console.log('gggg',list)
+  
 module.exports=Linkedlist  ;
