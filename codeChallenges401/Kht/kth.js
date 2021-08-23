@@ -39,6 +39,8 @@ class Linkedlist {
        let  pt=this.head
 
       for(let i=1;i< (this.size-value) +1;i++)
+
+      
          { pt=pt.next} 
 
    
