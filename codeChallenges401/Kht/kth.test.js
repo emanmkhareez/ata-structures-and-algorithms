@@ -33,16 +33,7 @@ describe('kth singlel inkedList',()=>{
             expect(node.tail.data).toBe(5)
             expect(node.size).toBe(2)
         })
-        it("should return true if finding the value in linkedlist",() =>{
-            let node =new Linkedlist()
-            node.insert(5)
-            node.insert(6)
-            expect(node.includes(5)).toBe(true)
-            expect(node.includes(6)).toBe(true)
-            expect(node.includes(4)).toBe(false)
-    
-
-        })
+        
         it("Where k is greater than the length of the linked list ||Where k is not a positive integer",()=>{
             let node=new Linkedlist()
             node.insert(5)
