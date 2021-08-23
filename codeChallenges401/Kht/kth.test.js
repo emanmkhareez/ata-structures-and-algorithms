@@ -52,6 +52,13 @@ describe('kth singlel inkedList',()=>{
             
 
         })
+        it("Where k and the length of the list are the same",()=>{
+            let node=new Linkedlist()
+            node.insert(5)
+            node.insert(6)
+            
+            expect(node.kth(1)).toBe(5)
+        })
 
 
 })

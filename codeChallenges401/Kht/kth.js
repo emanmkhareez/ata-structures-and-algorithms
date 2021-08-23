@@ -32,6 +32,10 @@ class Linkedlist {
     }
     
     kth(value){
+        if(  value < 0 || value>this.size ){
+            return false
+          }
+          else{
        let  pt=this.head
 
       for(let i=1;i< (this.size-value) +1;i++)
@@ -39,6 +43,7 @@ class Linkedlist {
 
    
         return  pt.data}
+          }
 
     
   
