@@ -48,9 +48,10 @@ describe('kth singlel inkedList',()=>{
             node.insert(5)
             node.insert(6)
             
-            expect(node.kth(1)).toBe(5)
+            expect(node.kth(-1)).toBe(false)
             
 
         })
+
 
 })
