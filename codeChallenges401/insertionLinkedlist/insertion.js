@@ -1,4 +1,5 @@
 'use strict'
+const Node=require('./Node')
 class Linkedlist {
 
     constructor() {
@@ -73,3 +74,15 @@ class Linkedlist {
   }
   
 }
+
+let list = new LinkedList();
+list.insert(1);
+list.append(2);
+list.append(3);
+list.insertBefore(2,5);
+list.insertAfter(1,4);
+
+
+console.log(list.toString());
+console.log(list.includes(2));
+module.exports=Linkedlist

@@ -1,6 +1,6 @@
 "use strict";
 
-let LinkedList = require("../linkedList");
+let LinkedList = require("./insertion");
 
 describe("LinkedList", () => {
   it("the initial constructor()", () => {
