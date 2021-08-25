@@ -26,3 +26,4 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 |LinkedList |[LinkedList](codeChallenges401/linkedlist/README.md)|
 |insertionLinkedList|[insertionLinkedList](codeChallenges401/insertionLinkedlist/README.md)|
 |kthLinkedList |[kthLinkedList](codeChallenges401/Kht/README.md)|
+|ZIP-Linked-List |[ZIP-Linked-List](codeChallenges401/linked-list-zip/README.md)|
