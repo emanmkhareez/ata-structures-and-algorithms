@@ -26,8 +26,8 @@ describe('peek', () => {
     let queue = new Queue();
 
     it('peek', () => {
-        queue.enqueue(1);
-        queue.enqueue(2);
+        queue.Enqueue(1);
+        queue.Enqueue(2);
 
         expect(queue.peek()).toBe(1);
 

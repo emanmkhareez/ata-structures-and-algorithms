@@ -1,75 +1,43 @@
-const Node=require('./Node')
-  
-  // newnode=new Node(4)
-  // console.log(newnode)
-  
-  class Stack{
-    constructor(){
-      // this.top=null
-      this.top=null
-      this.tail=null
-      this.size=0
+class Stack {
+    constructor() {
+        this.top = null;
+        this.length = 0;
     }
-    isEmpty(){
-      return this.top==null
+
+    push(value) {
+        let node = new Node(value);
+        node.next = this.top;
+        this.top = node;
+        this.length = this.length + 1;
     }
-    push(value){
-      let newnode=new Node(value)
-  
-      newnode.link=this.top
-          this.top=newnode
-   
-          
-          if (this.size==0){
-            this.tail=newnode
-          }
-       
-          
-          this.size+=1
-  
-  
-     
+
+
+    pop() {
+        if (!this.top) {
+            return 'Empty Stack';
+        }
+        let ptr = this.top;
+
+        this.top = ptr.next;
+        ptr.next = null;
+        this.length = this.length - 1;
+        return ptr.value;
+
     }
-    len(){
-      return this.size
+
+    peek() {
+        if (!this.top) {
+            return 'Empty Stack';
+        }
+        return this.top.value;
     }
-     pop  (){
-       if(this.top==null){
-         return 'stack is empty'
-       }
-       let p=this.top
-       this.top=this.top.link
-       p.link=null
-       this.size-=1
-       return p
-  
-   
-       
-       
-  
-  
-  
-  
-    
+
+    isEmpty() {
+        if (this.length === 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
-    peek(){
-      let  p=this.top
-      p.link=null
-      return p
-    }
-  
-  
-  }
-  module.exports=Stack
-//   let newnode=new Stack()
-//   newnode.push(3)
-//   newnode.push(4)
-//   newnode.push(5)
-  
-  
-//   console.log(newnode)
-//   // console.log(newnode.pop())
-//   // console.log(newnode.pop())
-//   console.log(newnode.peek())
-//   console.log(newnode.len())
-  
+}
+module.exports=Stack
