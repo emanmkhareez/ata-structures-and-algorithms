@@ -1,5 +1,5 @@
 
-const Queue = require('./Queue').Queue;
+const Queue = require('./Queue');
 
 
 describe('enqueue', () => {
