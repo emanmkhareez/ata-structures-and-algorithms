@@ -1,59 +1,65 @@
+  
+'use strict'
 
-const Queue = require('./Queue');
+const Queue=require('./Queue');
 
-
-describe('enqueue', () => {
+const Queue = require("../queue");
+describe("Queue class", () => {
+  it("enqueue into a queue ", () => {
     let queue = new Queue();
+    queue.Enqueue("a");
 
-    it('Creates an instance of Queue', () => {
-        expect(queue instanceof Queue).toBeTruthy();
-    });
-
-
-    it('enqueue multiple values into a queue then dequeue ', () => {
-
-        queue.Enqueue(1);
-        queue.Enqueue(2);
-        expect(queue.Dequeue()).toEqual(1);
-        expect(queue.Dequeue()).toEqual(2);
-
-    });
-
-
-});
-
-describe('peek', () => {
+    expect(queue.front.value).toBe("a");
+  });
+  it(" enqueue multiple values into a queue", () => {
     let queue = new Queue();
+    queue.Enqueue("a");
+    queue.Enqueue("b");
+    queue.Enqueue("c");
 
-    it('peek', () => {
-        queue.Enqueue(1);
-        queue.Enqueue(2);
-
-        expect(queue.peek()).toBe(1);
-
-    });
-
-
-});
-describe('it is empty queue', () => {
+    expect(queue.front.value).toBe("a");
+    expect(queue.rear.value).toBe("c");
+  });
+  it(" dequeue out of a queue the expected value", () => {
     let queue = new Queue();
+    queue.Enqueue("a");
+    queue.Enqueue("b");
+    queue.Enqueue("c");
+    queue.Dequeue();
 
-    it('return false', () => {
-        queue.Enqueue(1);
-        queue.Enqueue(2);
+    expect(queue.front.value).toBe("b");
+    expect(queue.rear.value).toBe("c");
+    expect(queue.Dequeue()).toBe("b");
+  });
+  it(" peek into a queue", () => {
+    let queue = new Queue();
+    queue.Enqueue("a");
+    queue.Enqueue("b");
+    queue.Enqueue("c");
 
-        expect(queue.isEmpty()).toBeFalsy;
+    expect(queue.front.value).toBe("a");
+    expect(queue.rear.value).toBe("c");
+    expect(queue.peek()).toBe("a");
+  });
+  it("empty a queue ", () => {
+    let queue = new Queue();
+    queue.Enqueue("a");
+    queue.Enqueue("b");
+    queue.Enqueue();
+    queue.Dequeue();
+    
 
-    });
-    it('return true', () => {
+    expect(queue.front).toBe(null);
+    expect(queue.rear).toBe(null);
+  });
+  it(" instantiate an empty queue", () => {
+    let queue = new Queue();
+    queue.Enqueue("a");
+    queue.Enqueue("b");
+    let newQueue=new Queue();
 
-        expect(queue.isEmpty()).toBeTruthy;
-    });
-    it('size ',()=>{
-        let queue = new Queue();
-        queue.Enqueue(1)
-        queue.Enqueue(1)
-        expect(queue.len()).toBe(2)
+    expect(newQueue).toBeInstanceOf(Queue);
+    expect(queue.isEmpty()).toBe("the Queue have values");
+  });
 
-    })
 });
