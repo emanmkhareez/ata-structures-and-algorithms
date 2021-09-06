@@ -31,4 +31,5 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 |AnimalShelter|[AnimalShelter](codeChallenges401/stack-and-queue/animal-shelter/README.md)|
 |BracktStack|[BracktStack](codeChallenges401/Stack_bracket/README.md)|
 |stack-queue-pseudo|[stack-queue-pseudo](codeChallenges401/pesudo/README.md)|
-|trees|[trees](codeChallenges401/trees/README.md)|
+|trees|[trees](codeChallenges401/tree-max/README.md)|
+|binarymax|[binarymax](codeChallenges401/tree-max/README.md)|
