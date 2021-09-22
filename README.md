@@ -36,4 +36,5 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 |readthFirstSearch|[readthFirstSearch](codeChallenges401/tree-breadth-first/README.md)|
 |tree-fizz-buzz|[tree-fizz-buzz](codeChallenges401/tree-fizz-buzz/README.md)|
 |insertion|[insertion](codeChallenges401/insertionfunction.md)|
-|mergeSort|[mergeSort](mergeSort/merge.md)|
+|mergeSort|[mergeSort](codeChallenges401/mergeSort/merge.md)|
+|quickSort|[quickSort](codeChallenges401/quickSort/quickSort.md)|
