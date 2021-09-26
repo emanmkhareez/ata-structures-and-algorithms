@@ -38,3 +38,4 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 |insertion|[insertion](codeChallenges401/insertionfunction.md)|
 |mergeSort|[mergeSort](codeChallenges401/mergeSort/merge.md)|
 |quickSort|[quickSort](codeChallenges401/quickSort/quickSort.md)|
+|hashtable|[hashtable](codeChallenges401/hash_table/README.md)|
