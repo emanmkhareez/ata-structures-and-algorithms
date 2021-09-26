@@ -11,9 +11,8 @@ get(K key): Returns value associated with that key in the table
 
 contains: Returns boolean, indicating if the key exists in the table already.
 
-```
+
 [hash](./hashtable.js)
 
 [hash_repeat](./hash-first-repeat.js)
 
- ```
