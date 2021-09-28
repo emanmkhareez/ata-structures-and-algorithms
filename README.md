@@ -39,3 +39,4 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 |mergeSort|[mergeSort](codeChallenges401/mergeSort/merge.md)|
 |quickSort|[quickSort](codeChallenges401/quickSort/quickSort.md)|
 |hashtable|[hashtable](codeChallenges401/hash_table/README.md)|
+|hashmap-tree-intersection|[hashmap-tree-intersection](codeChallenges401/hashmap-tree-intersection/README.md)|
