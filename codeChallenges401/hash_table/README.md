@@ -16,3 +16,5 @@ contains: Returns boolean, indicating if the key exists in the table already.
 
 [hash_repeat](./hash-first-repeat.js)
 
+[joinhash](./joinhash.js)
+
