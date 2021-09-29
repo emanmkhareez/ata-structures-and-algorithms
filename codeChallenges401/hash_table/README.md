@@ -18,3 +18,5 @@ contains: Returns boolean, indicating if the key exists in the table already.
 
 [joinhash](./joinhash.js)
 
+[repeatewor](./repeatword.js)
+
