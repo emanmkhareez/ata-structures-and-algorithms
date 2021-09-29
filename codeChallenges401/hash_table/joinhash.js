@@ -1,17 +1,20 @@
 "use strict";
-const HashTable=require('./hashtable');
 
-function leftJoin(leftHashMap,rightHashMap){
-    rightHashMap.map.forEach(bucket=>{
-        if (leftHashMap.contain(bucket.head.val[key])) {
+const HashTable=require('./hashtable');
+//function left join take tow instance from hash class
+function leftJoin(first,second){
+    second.map.forEach(bucket=>{
+        //loop around the first hash 
+        if (first.contain(bucket.head.data[key])) {
+
             let current=bucket.head;
             while (current.next) {
-               leftHashMap.add(current.val[key],current.val[key]); 
+               first.add(current.val[key],current.data[key]); 
             }
-            leftHashMap.add(current.val[key],current.val[key]);
+            first.add(current.data[key],current.data[key]);
         }
     });
-    return leftHashMap;
+    return first;
 }
 
 let left = new HashTable(3);
